@@ -1,0 +1,88 @@
+% This file defines some set-up and generic functions for a resume.
+% It expects some packages to have already been imported.
+
+% Adapted from a template obtained from
+% http://www.cv-templates.info/2009/03/professional-cv-latex/
+
+%%%%% Setup %%%%%
+
+% Set-up xetex font options.
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+
+% Format \section titles - reduce vertical spacing below, and underline.
+\titlespacing{\section}{0pt}{-2pt}{0pt}
+\titleformat{\section}{\Large\scshape\raggedright\sffamily}{}{0em}{}[\titlerule]
+
+% Setup the hyperref package.
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks, breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
+
+% Fonts
+% \setromanfont [Ligatures={Common}, BoldFont={Linux Libertine O Bold}, ItalicFont={Linux Libertine O Italic}]{Linux Libertine O}
+% \setsansfont [Ligatures={Common}, BoldFont={GeosansLight}, ItalicFont={GeosansLight}]{GeosansLight}
+% \setmonofont{GeosansLight}
+
+%%%%% Commands %%%%%
+
+% University degree command.
+\newcommand{\degree}[4]{\textsc{#1} & \textbf{#2} & \textsc{#3} & \textbf{#4}\\}
+
+% Work experience command.
+\newcommand{\experience}[5]{
+\textsc{#1} & \textbf{#2} #3 \textsc{#4}\\
+\nopagebreak &\multicolumn{2}{p{5.75in}}{\small{#5}}\\
+\nopagebreak \multicolumn{3}{c}{} \\ [-1ex]
+}
+
+% Skill command, to highlight relevant keywords.
+\newcommand{\skill}{\textbf}
+
+% Skills/languages command - just a wrapper around \item.
+\newcommand{\skills}[2]{
+  \item #2 #1
+}
+
+% Fancy fading bullet points to indicate skill level.
+\definecolor{lightbullet}{HTML}{707070}
+\definecolor{mediumbullet}{HTML}{353535}
+\definecolor{darkbullet}{HTML}{000000}
+
+\newcommand{\oneskill}{%
+  \textcolor{white}{\symbol{"2022}}
+  \textcolor{white}{\symbol{"2022}}
+  \textcolor{darkbullet}{\symbol{"2022}}
+}
+
+\newcommand{\twoskill}{%
+  \textcolor{white}{\symbol{"2022}}
+  \textcolor{mediumbullet}{\symbol{"2022}}
+  \textcolor{darkbullet}{\symbol{"2022}}
+}
+
+\newcommand{\threeskill}{%
+  \textcolor{lightbullet}{\symbol{"2022}}
+  \textcolor{mediumbullet}{\symbol{"2022}}
+  \textcolor{darkbullet}{\symbol{"2022}}
+}
+
+% Language macros.
+\newcommand{\lang}[2]{\expandafter\def\csname #1\endcsname{\skill{#2}\xspace}}
+
+\lang{asthree}{AS3}
+\lang{bash}{Bash}
+\lang{cpp}{C++}
+\lang{ccpp}{C/C++}
+\lang{git}{git}
+\lang{html}{HTML/CSS}
+\lang{java}{Java}
+\lang{jni}{JNI}
+\lang{js}{JavaScript}
+\lang{jsp}{JSP}
+\lang{linux}{Linux}
+\lang{matlab}{MATLAB}
+\lang{php}{PHP}
+\lang{python}{Python}
+\lang{ruby}{Ruby}
+\lang{scala}{Scala}
+\lang{svn}{SVN}
+\lang{swing}{Swing}

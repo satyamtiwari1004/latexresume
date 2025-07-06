@@ -1,0 +1,159 @@
+\documentclass[10pt]{article}
+
+\usepackage[left=0.8in, right=0.8in, top=0.3in, bottom=0.3in]{geometry}
+\usepackage[unicode,
+            pdfencoding=auto,
+            pdfinfo={
+              Title={satyamtiwari/resume},
+              Author={Satyam Tiwari},
+              Subject={Satyam Tiwari Résumé},
+              Keywords={}
+            },
+            ]{hyperref}
+\usepackage{libertine}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xltxtra}
+\usepackage{xspace}
+
+% Include the generic setup/commands/etc.
+\include{misc}
+
+\begin{document}
+\pagestyle{empty}
+
+%%%%% Title. %%%%%%
+
+\par{\centering {\Huge Satyam Rajesh \textsc{Tiwari} }\bigskip\par}
+
+%%%%% Contact information. %%%%%%
+\vspace{0.15em}
+\section{Contact Details}
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}c c c}
+  \textsc{phone}: \href{tel:+919324678079}{+91 9324678079} &
+  \textsc{email}: \href{mailto:satyamtiwari1004@gmail.com}{satyamtiwari1004@gmail.com} &
+  \textsc{GitHub}: \href{https://github.com/satyamtiwari1004}{github.com/satyamtiwari1004} \\
+\end{tabularx}
+\vspace{0.15em}
+%%%%% Education. %%%%%%
+
+\section{Education}
+\vspace{0.5em}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}r l p{5.5cm} r}
+  \degree{Jun 2023}%
+  {M.Sc (Hons.)}%
+  {Computer Science}%
+  {University of Mumbai}
+\end{tabular*}
+
+%%%%% Work Experience. %%%%%%
+
+\vspace{0.8em}
+\section{Experience}
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\vspace{0.3em}
+
+\begin{longtable}{@{\extracolsep{\fill}} l | l r}
+
+  \experience{08/24 - Current}%
+    {Senior Associate Consultant}%
+    {at}%
+    {Infosys Pune}%
+    {Migrated a legacy PL/I-based monolithic tool to a modern Spring Boot architecture, ensuring full feature parity and enabling efficient large-scale data processing.
+
+    Engineered custom collection-based structures and fine-tuned resource configurations to prevent heap overflow, achieving \skill{5–10\%} faster high-volume sorted data operations.
+  
+    Introduced advanced Java parallel streams and ForkJoinPool-based multithreading, alongside improved garbage collection strategies, significantly enhancing scalability and stability.
+  
+    Integrated Redis for high-speed data access and leveraged the Executor Framework to enable asynchronous DB-intensive operations, boosting throughput and minimizing runtime bottlenecks.
+  
+    Employed thread-safe collections and implemented explicit cleanup routines before runs, achieving a \skill{97\% performance improvement} by reducing response time from \skill{800K ms to 25K ms}.
+  
+    Designed and implemented an AWS-based CI/CD pipeline to support seamless automated deployments, ensuring high availability and rapid delivery for the modernized architecture.}
+  
+  \vspace{-0.15em}
+  \experience{01/21 - 07/24}%
+    {Systems Engineer}%
+    {at}%
+    {Tata Consultancy Services Mumbai}%
+    {Designed and optimized robust REST APIs using Spring Boot to transform and migrate user data, integrating advanced Spring caching and ORM techniques to significantly reduce database query times, resulting in a \skill{10\%} performance improvement.
+
+    Engineered large-scale data processing pipelines using the Apache POI library, efficiently writing \skill{millions of rows} of data into Excel files and automating secure uploads to Box cloud storage via Box SDK and JWT-based authentication.
+  
+    Developed advanced refire logic combined with a RabbitMQ-based asynchronous microservices architecture, enabling seamless resumption and migration of failed setups from the exact point of failure, reducing recovery and migration time by \skill{50\%}.
+  
+    Successfully migrated over \skill{40k user setups \& 15TB+ of data} to next-gen applications and Box within a compressed timeline, achieving a \skill{98\% success rate} and delivering over \skill{\$5M+} cost savings for the client.
+  }
+
+
+\end{longtable}
+
+%%%%% Projects. %%%%%%
+
+\vspace{-0.50em}
+\section{Projects}
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\vspace{0.3em}
+
+\begin{longtable}{@{\extracolsep{\fill}} l | l r}
+
+  \experience{03/25 - 04/25}%
+  {FLPS Application Modernization}%
+  {at}%
+  {Infosys Pune}%
+  {Modernized an Ant-based monolithic Spring application into a Maven-based Spring Boot microservices architecture, improving modularity, scalability, and deployment efficiency.
+  
+  Replaced legacy Hibernate XML and Spring XML configurations with annotation-based JPA repositories and Java configuration, simplifying DAO logic and reducing maintenance overhead.
+  
+  Optimized PostgreSQL queries to align with Hibernate 6 and JPA standards, improving performance and compatibility.
+  
+  Migrated deployment from WebLogic to Apache Tomcat, reducing server complexity and streamlining deployment.}  
+
+\end{longtable}
+
+%%%%% Skills/Languages %%%%%%
+
+\vspace{-1em}
+\section{Skills \& Languages}
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{l | l r}
+Languages & {Java, Python, JavaScript } \\
+Frameworks & {Spring, Spring Boot, Django, ReactJS, Executor Framework} \\
+Technologies & {Microservices, Hibernate 6, Maven, Ant, Elastic Search, Redis, GraphQL} \\
+Databases & {PostgreSQL, MySQL, Oracle, MongoDB} \\
+Tools & {Git, RabbitMQ, Kafka, Docker, Kubernetes, Jenkins, Weblogic, Tomcat, Nginx, AWS EC2, S3, Azure} \\
+\end{tabularx}
+
+%%%%% Honors/Awards %%%%%%
+
+\vspace{0.75em}
+\section{Honors/Awards}
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{r|X}
+2025 & {Insta Awards: Awarded for improving the performance and understanding of the PL/I application} \\
+2023 & {On The Spot Award: Awarded for developing logic to migrate setups having multi-tenant owners} \\
+2022 & {On The Spot Team Award: Awarded for delivering the application to the client in record time with 0 defects} \\
+\end{tabularx}
+
+%%%%% Footnote. %%%%%%
+
+\null\vfill
+\footnotesize{
+  LinkedIn:  \href{https://www.linkedin.com/in/satyamtiwari198/}{linkedin.com/satyamtiwari198} \hfill
+  Source:  \href{https://github.com/satyamtiwari1004/latexresume}{github.com/satyamtiwari1004/latexresume}
+}
+
+\end{document}
