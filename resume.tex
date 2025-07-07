@@ -1,6 +1,6 @@
 \documentclass[10pt]{article}
 
-\usepackage[left=0.8in, right=0.8in, top=0.3in, bottom=0.3in]{geometry}
+\usepackage[left=0.8in, right=0.7in, top=0.5in, bottom=0.5in]{geometry}
 \usepackage[unicode,
             pdfencoding=auto,
             pdfinfo={
@@ -20,6 +20,10 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{xltxtra}
 \usepackage{xspace}
+\usepackage{pagecolor}
+
+\definecolor{warmwhite}{RGB}{255,254,253}
+\pagecolor{warmwhite}
 
 % Include the generic setup/commands/etc.
 \include{misc}
@@ -29,22 +33,21 @@
 
 %%%%% Title. %%%%%%
 
-\par{\centering {\Huge Satyam Rajesh \textsc{Tiwari} }\bigskip\par}
+\par{\centering {\Huge Satyam \textsc{Tiwari} }\bigskip\par}
 
 %%%%% Contact information. %%%%%%
-\vspace{0.15em}
 \section{Contact Details}
-\vspace{0.5em}
+\vspace{0.75em}
 \begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}c c c}
   \textsc{phone}: \href{tel:+919324678079}{+91 9324678079} &
   \textsc{email}: \href{mailto:satyamtiwari1004@gmail.com}{satyamtiwari1004@gmail.com} &
   \textsc{GitHub}: \href{https://github.com/satyamtiwari1004}{github.com/satyamtiwari1004} \\
 \end{tabularx}
-\vspace{0.15em}
+\vspace{0.10em}
 %%%%% Education. %%%%%%
 
 \section{Education}
-\vspace{0.5em}
+\vspace{0.25em}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}r l p{5.5cm} r}
   \degree{Jun 2023}%
@@ -55,12 +58,12 @@
 
 %%%%% Work Experience. %%%%%%
 
-\vspace{0.8em}
+\vspace{1em}
 \section{Experience}
 
 \setlength\LTleft{0pt}
 \setlength\LTright{0pt}
-\vspace{0.3em}
+\vspace{-0.25em}
 
 \begin{longtable}{@{\extracolsep{\fill}} l | l r}
 
@@ -72,24 +75,24 @@
 
     Engineered custom collection-based structures and fine-tuned resource configurations to prevent heap overflow, achieving \skill{5–10\%} faster high-volume sorted data operations.
   
-    Introduced advanced Java parallel streams and ForkJoinPool-based multithreading, alongside improved garbage collection strategies, significantly enhancing scalability and stability.
+    Introduced advanced Java \skill{parallel streams} and \skill{ForkJoinPool}-based multithreading, alongside improved garbage collection strategies, significantly enhancing scalability and stability.
   
-    Integrated Redis for high-speed data access and leveraged the Executor Framework to enable asynchronous DB-intensive operations, boosting throughput and minimizing runtime bottlenecks.
+    Integrated \skill{Redis} for high-speed data access and leveraged the \skill{Executor Framework} to enable asynchronous DB-intensive operations, boosting throughput and minimizing runtime bottlenecks.
   
     Employed thread-safe collections and implemented explicit cleanup routines before runs, achieving a \skill{97\% performance improvement} by reducing response time from \skill{800K ms to 25K ms}.
   
-    Designed and implemented an AWS-based CI/CD pipeline to support seamless automated deployments, ensuring high availability and rapid delivery for the modernized architecture.}
+    Designed and implemented an \skill{AWS}-based CI/CD pipeline to support seamless automated deployments, ensuring high availability and rapid delivery for the modernized architecture.}
   
   \vspace{-0.15em}
   \experience{01/21 - 07/24}%
     {Systems Engineer}%
     {at}%
     {Tata Consultancy Services Mumbai}%
-    {Designed and optimized robust REST APIs using Spring Boot to transform and migrate user data, integrating advanced Spring caching and ORM techniques to significantly reduce database query times, resulting in a \skill{10\%} performance improvement.
+    {Designed and optimized robust \skill{REST APIs} using Spring Boot to transform and migrate user data, integrating advanced Spring caching and ORM techniques to significantly reduce database query times, resulting in a \skill{10\%} performance improvement.
 
-    Engineered large-scale data processing pipelines using the Apache POI library, efficiently writing \skill{millions of rows} of data into Excel files and automating secure uploads to Box cloud storage via Box SDK and JWT-based authentication.
+    Engineered large-scale data processing pipelines using the \skill{Apache POI} library, efficiently writing \skill{millions of rows} of data into Excel files and automating secure uploads to Box cloud storage via \skill{Box SDK} and \skill{JWT}-based authentication.
   
-    Developed advanced refire logic combined with a RabbitMQ-based asynchronous microservices architecture, enabling seamless resumption and migration of failed setups from the exact point of failure, reducing recovery and migration time by \skill{50\%}.
+    Developed advanced refire logic combined with a \skill{RabbitMQ}-based asynchronous \skill{microservices} architecture, enabling seamless resumption and migration of failed setups from the exact point of failure, reducing recovery and migration time by \skill{50\%}.
   
     Successfully migrated over \skill{40k user setups \& 15TB+ of data} to next-gen applications and Box within a compressed timeline, achieving a \skill{98\% success rate} and delivering over \skill{\$5M+} cost savings for the client.
   }
@@ -100,25 +103,23 @@
 %%%%% Projects. %%%%%%
 
 \vspace{-0.50em}
-\section{Projects}
+\section{Prototype Projects}
 
 \setlength\LTleft{0pt}
 \setlength\LTright{0pt}
-\vspace{0.3em}
+\vspace{-0.25em}
 
 \begin{longtable}{@{\extracolsep{\fill}} l | l r}
 
-  \experience{03/25 - 04/25}%
+  \experience{03/25 - 04/25\phantom{2pt}}%
   {FLPS Application Modernization}%
   {at}%
   {Infosys Pune}%
-  {Modernized an Ant-based monolithic Spring application into a Maven-based Spring Boot microservices architecture, improving modularity, scalability, and deployment efficiency.
+  {Modernized an \skill{Ant}-based monolithic \skill{Spring} application into a \skill{Maven}-based \skill{Spring Boot} \skill{microservices} architecture, improving modularity, scalability, and deployment efficiency.
   
-  Replaced legacy Hibernate XML and Spring XML configurations with annotation-based JPA repositories and Java configuration, simplifying DAO logic and reducing maintenance overhead.
-  
-  Optimized PostgreSQL queries to align with Hibernate 6 and JPA standards, improving performance and compatibility.
-  
-  Migrated deployment from WebLogic to Apache Tomcat, reducing server complexity and streamlining deployment.}  
+  Replaced legacy \skill{Hibernate XML} and \skill{Spring XML} configurations with annotation-based \skill{JPA} repositories and \skill{Java} configuration, simplifying DAO logic and reducing maintenance overhead.
+    
+  Migrated deployment from \skill{WebLogic} to \skill{Apache Tomcat}, reducing server complexity and streamlining deployment.}  
 
 \end{longtable}
 
@@ -126,16 +127,46 @@
 
 \vspace{-1em}
 \section{Skills \& Languages}
-\setlength\LTleft{0pt}
-\setlength\LTright{0pt}
-\vspace{0.5em}
-\begin{tabularx}{\textwidth}{l | l r}
-Languages & {Java, Python, JavaScript } \\
-Frameworks & {Spring, Spring Boot, Django, ReactJS, Executor Framework} \\
-Technologies & {Microservices, Hibernate 6, Maven, Ant, Elastic Search, Redis, GraphQL} \\
-Databases & {PostgreSQL, MySQL, Oracle, MongoDB} \\
-Tools & {Git, RabbitMQ, Kafka, Docker, Kubernetes, Jenkins, Weblogic, Tomcat, Nginx, AWS EC2, S3, Azure} \\
-\end{tabularx}
+
+\begin{multicols}{4}
+\raggedcolumns
+
+\begin{itemize}
+
+% Remove the normal bullet points.
+\renewcommand{\labelitemi}{}
+
+% Don't bold skill names here.
+\renewcommand{\skill}{\textnormal}
+
+% Cluster things a bit closer.
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+\skills{\java}{\threeskill}
+\skills{\python}{\twoskill}
+\skills{\springboot}{\threeskill}
+\skills{\maven}{\twoskill}
+\skills{\elasticsearch}{\oneskill}
+\skills{\redis}{\twoskill}
+\skills{\rabbitmq}{\twoskill}
+\skills{\postgresql}{\threeskill}
+\skills{\oracle}{\twoskill}
+\skills{\git}{\twoskill}
+\skills{\kubernetes}{\oneskill}
+\skills{\aws}{\twoskill}
+
+\end{itemize}
+
+\end{multicols}
+\vspace{-1em}
+  \begin{footnotesize}
+    \oneskill Small-scale projects and/or assignments \hfill 
+    \twoskill Multiple projects and/or experience teaching \hfill
+    \threeskill Large-scale and/or multi-group projects
+  \end{footnotesize}
+
 
 %%%%% Honors/Awards %%%%%%
 
